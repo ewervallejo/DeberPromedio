@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio1</title>
+
+    <script language="JavaScript" type="text/javascript">
+        function resultado(){
+        var x1=ejercicio1.n1.value;
+        var x2=ejercicio1.n2.value;
+        var x3=ejercicio1.n3.value;
+        var xresul = (parseFloat(x1)+parseFloat(x2)+parseFloat(x3))/3;
+        if(xresul > 6.99 ){
+             document.getElementById('result').value="APROBADO";
+        }else{
+             document.getElementById('result').value="DESAPROBADO";
+        }
+
+    }
+   </script>
+</head>
+
+<body>
+    <form method="get" name="ejercicio1">
+        INGRESE NOTA 01 : <input name="n1" type="text" > <br>
+        INGRESE NOTA 02 : <input name="n2" type="text" > <br>
+        INGRESE NOTA 03 : <input name="n3" type="text" > <br>
+        <input type="button" value="OPERAR" onClick="resultado()" > <br>
+        RESULTADO : <input name="result" id="result" type="text" > <br>
+   </form>
+
+      
+
+</body>
+
+</html>

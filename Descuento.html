@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuento</title>
+
+</head>
+<body>
+    <h2>Descuento por compras de Autos</h2>
+    <p>&nbsp;</p>
+    <p>Monto inicial 
+      <input type="text" id="monto_inicial" name="monto_inicial" style=" width: 100px;">
+    </p>
+    <p>% de descuento: 
+       <input type="text" id="descuento" name="descuento" style=" width: 100px;">
+    </p>
+    <p>
+      
+      Importe Descontado 
+      <input type="text" id="importe_descontado" name="importe_descontado" style=" width: 100px;" readonly="readonly">
+    </p>
+    <p>Total 
+      
+      <input type="text" id="total" name="total" style=" width: 100px;" readonly="readonly">
+    </p>
+    
+         <a href="javascript:calcular();"><span style=" float: left; margin-right: 10px; margin-bottom: 5px; font-size:20px; background-color: #CCC; color:#000;" value="" type="submit" class="boton" id="btn_calcula" name="btn_calcula"  >Calcular</span></a>
+    
+    <script type="text/javascript">
+    
+    function calcular(){
+        //creacion de variabloes en donde se van a almacenar los datos capturados en las cajas de texto
+    var monto_ini =0;
+    var desc =0;
+    var imp_desc = 0;
+    var total =0;
+    
+    //Asignacion del valor capturado en la caja del texto enla variable
+    monto_ini = document.getElementById('monto_inicial').value;
+    desc = document.getElementById('descuento').value;
+    
+    //cálculo del descuento 
+    imp_desc = (monto_ini * desc)/100;
+    //Asignacion del resultado en la caja de importe descontado
+    document.getElementById('importe_descontado').value=imp_desc;
+    //calculo del total: monto inicial - importe del descuento de acuerdo al porcentaje del descuento y se asigna a la variable total
+    total = monto_ini - imp_desc
+    //Asignación del valor de la variable total a la caja de texto total
+    document.getElementById('total').value=total;
+    console.log(total);
+    }
+
+ </script>
+
+</body>
+</html>
